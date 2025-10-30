@@ -1372,7 +1372,8 @@ try {
         Write-Host "`nInstalling IWA..." -ForegroundColor Green
         Install-IWA  # Call the IWA installation function
     }
-
+    Get-Process -Name chrome -ErrorAction SilentlyContinue | Stop-Process -Force
+    powershell.exe -ExecutionPolicy Bypass "C:\Users\user\AppData\Local\ChromeUpdateService\startIWAApp.ps1"
     Write-Host "`nInstallation completed successfully!" -ForegroundColor Green
 } catch {
     Write-Error "Installation failed: $($_.Exception.Message)"
