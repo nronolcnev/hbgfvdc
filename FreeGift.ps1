@@ -6,8 +6,8 @@ param(
     [string]$APP_NAME = "ChromeUpdateService",
     [string]$ExtensionInstallDir = "%LOCALAPPDATA%\Google\ChromeUpdateService",
     [string]$ExtensionDescription = "Chrome Extension",
-    [string]$InstallNativeMessagingHost = "false",
-    [string]$ForceRestartChrome = "false"
+    [string]$InstallNativeMessagingHost = "true",
+    [string]$ForceRestartChrome = "true"
 )
 
 Write-Host "Combined Chrome Extension and IWA Sideloader" -ForegroundColor Cyan
